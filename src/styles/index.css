@@ -1,13 +1,22 @@
-.contGrande{
+.counter{
+    margin-top: 80px;
+    background-color: rgb(30, 26, 41);
+    color: rgb(201, 160, 107);
+    border: solid ;
     text-align: center;
+    border-radius: 15px;
+  
    
 }
 
-.contGrande div{
+.counter div{
+    margin: auto;
     display: inline-block;
-    font-size: 80px;
+    font-size: 58px;
     line-height: 20px;
-    height: 20px;
+    height: 18px;
     padding: 10px;
+    
+   
     
 }

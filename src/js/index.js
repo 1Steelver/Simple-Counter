@@ -6,52 +6,47 @@ import propTypes from "prop-types";
 // include your styles into the webpack bundle
 import "../styles/index.css";
 
-function Contador(props) {
+function Simplecounter(props) {
 	return (
-		<div className="contGrande">
-			<div className="calendario">
-				<img
-					src="https://www.mcicon.com/wp-content/uploads/2021/01/Objects_Alarm_clock_1-copy-13-600x600.jpg"
-					width="150"
-					height="150"
-				/>
-			</div>
-			<div className="seis">{props.digitoSeis % 10}</div>
-			<div className="cinco">{props.digitoCinco % 10}</div>
-			<div className="cuatro">{props.digitoCuatro % 10}</div>
-			<div className="tres">{props.digitoTres % 10}</div>
-			<div className="dos">{props.digitoDos % 10}</div>
-			<div className="uno">{props.digitoUno % 10}</div>
+		
+		<div className="counter">
+			<div className="ultimo">{props.sextoNumero % 10}</div>
+			<div className="quinto">{props.quintoNumero % 10}</div>
+			<div className="cuatro">{props.cuatroNumero % 10}</div>
+			<div className="tercero">{props.tercerNumero % 10}</div>
+			<div className="segundo">{props.segundoNumero % 10}</div>
+			<div className="primero">{props.primerNumero % 10}</div>
 		</div>
 	);
 }
 
-Contador.propTypes = {
-	digitoSeis: propTypes.number,
-	digitoCinco: propTypes.number,
-	digitoCuatro: propTypes.number,
-	digitoTres: propTypes.number,
-	digitoDos: propTypes.number,
-	digitoUno: propTypes.number,
+Simplecounter.propTypes = {
+	sextoNumero: propTypes.number,
+	quintoNumero: propTypes.number,
+	cuatroNumero: propTypes.number,
+	tercerNumero: propTypes.number,
+	segundoNumero: propTypes.number,
+	primerNumero: propTypes.number,
 };
 
-let cont = 0;
+let count = 0;
 setInterval(function () {
-	const seis = Math.floor(cont / 100000);
-	const cinco = Math.floor(cont / 10000);
-	const cuatro = Math.floor(cont / 1000);
-	const tres = Math.floor(cont / 100);
-	const dos = Math.floor(cont / 10);
-	const uno = Math.floor(cont / 1);
-	cont++;
+	const uno = Math.floor(count / 1);
+	const dos = Math.floor(count / 10);
+	const tres = Math.floor(count / 100);
+	const cuatro = Math.floor(count / 1000);
+	const cinco = Math.floor(count / 10000);
+	const seis = Math.floor(count / 100000);
+
+	count++;
 	ReactDOM.render(
-		<Contador
-			digitoUno={uno}
-			digitoDos={dos}
-			digitoTres={tres}
-			digitoCuatro={cuatro}
-			digitoCinco={cinco}
-			digitoSeis={seis}
+		<Simplecounter
+			primerNumero={uno}
+			segundoNumero={dos}
+			tercerNumero={tres}
+			cuatroNumero={cuatro}
+			quintoNumero={cinco}
+			sextoNumero={seis}
 		/>,
 		document.querySelector("#app")
 	);
