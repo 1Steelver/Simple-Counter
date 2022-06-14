@@ -1,10 +1,14 @@
 .counter{
-    margin-top: 80px;
+    
+    margin-top: 120px;
     background-color: rgb(30, 26, 41);
     color: rgb(201, 160, 107);
     border: solid ;
     text-align: center;
     border-radius: 15px;
+    
+    
+    
   
    
 }

@@ -8,7 +8,6 @@ import "../styles/index.css";
 
 function Simplecounter(props) {
 	return (
-		
 		<div className="counter">
 			<div className="ultimo">{props.sextoNumero % 10}</div>
 			<div className="quinto">{props.quintoNumero % 10}</div>
